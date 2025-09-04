@@ -620,16 +620,13 @@ const colorsTablo = [
 
 function getRandomInteger(min, max) {
   min = Math.ceil(min);
-
   max = Math.floor(max);
-
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
 changeColorRandom = (id = "#colorChange", duration = 1000) => {
   return window.setInterval(function () {
     var color = colorsTablo[getRandomInteger(0, colorsTablo.length)];
-
     document.querySelector(id).style.color = color;
   }, duration);
 };
